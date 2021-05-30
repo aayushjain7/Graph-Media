@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Card, Icon, Label, Image, Button, Popup } from 'semantic-ui-react';
+import { Card, Icon, Label, Image, Button } from 'semantic-ui-react';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../context/auth';
@@ -10,10 +10,6 @@ import MyPopUp from '../utils/MyPopUp';
 function PostCard({ post }) {
   const { body, createdAt, id, username, likeCount, commentCount, likes } = post;
   const { user } = useContext(AuthContext);
-
-  const likePost = () => {
-    console.log('Like Post');
-  };
 
   return (
     <Card fluid>
